@@ -39,6 +39,11 @@ const App = () => {
   return (
     <main>
       <Tours tours={tours} deleteTour={deleteTour} />
+      {!tours.length && (
+        <button type='button' className='btn' onClick={fetchTours}>
+          Refresh
+        </button>
+      )}
     </main>
   );
 };
