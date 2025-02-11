@@ -1,5 +1,16 @@
+import { useState } from 'react';
+
 const ToggleChallenge = () => {
-  return <h2>toggle challenge</h2>;
+  const [show, setShow] = useState(false);
+
+  return (
+    <>
+      <button type='button' className='btn' onClick={() => setShow(!show)}>
+        {show ? 'hide' : 'show'}
+      </button>
+      {show && <h3>Component</h3>}
+    </>
+  );
 };
 
 export default ToggleChallenge;
